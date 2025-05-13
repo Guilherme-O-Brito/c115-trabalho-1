@@ -2,7 +2,7 @@ Criando topologia
 sudo mn --topo=linear,6 --mac --link tc,bw=25
 
 verificando nodes
-node
+nodes
 dump
 
 inspecionando interfaces

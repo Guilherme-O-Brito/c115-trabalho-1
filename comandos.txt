@@ -1,0 +1,22 @@
+Criando topologia
+sudo mn --topo=linear,6 --mac --link tc,bw=25
+
+verificando nodes
+node
+dump
+
+inspecionando interfaces
+h1 ifconfig -a
+s1 ifconfig -a
+
+realizando ping
+pingall
+
+abrindo terminais h1 e h2
+xterm h1 h2
+
+executado no terminal h1
+iperf -s -p 5555 -i 1
+
+executado no terminal h2
+iperf -c 10.0.0.1 -p 5555 -i 1 -t 10
